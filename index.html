@@ -7,7 +7,19 @@
   <title>Beachfront Co-op - Hillsboro Mile</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const imgs = document.querySelectorAll(".img-wrapper img");
+    imgs.forEach(img => {
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
+        img.parentNode.classList.remove("loading");
+      });
+    });
+  });
+</script>
+
+  <body>
   <header>
     <h1>Beachfront Co-op - Hillsboro Mile</h1>
     <nav>
